@@ -181,6 +181,7 @@ namespace EDDemo.Estructuras_No_Lineales
                     MessageBox.Show($"Se encontró el nodo '{txtDato.Text}'");
                 else
                     MessageBox.Show($"No se encontró el nodo '{txtDato.Text}'");
+                //cambio
             }
         }
     }
