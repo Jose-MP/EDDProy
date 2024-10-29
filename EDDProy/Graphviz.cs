@@ -15,8 +15,8 @@ namespace EDDemo
     {
         public static Bitmap Run(string dot)
         {
-            string executable = @".\external\dot.exe";
-            string output = @".\external\tempgraph";
+            string executable = @"C:\Users\jr010\OneDrive\Escritorio\EDD\EDDProy\externon\dot.exe";
+            string output = @"C:\Users\jr010\OneDrive\Escritorio\EDD\EDDProy\externon\tempgraph";
             File.WriteAllText(output, dot);
 
             System.Diagnostics.Process process = new System.Diagnostics.Process();
