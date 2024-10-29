@@ -49,6 +49,7 @@ namespace EDDemo.Estructuras_No_Lineales
                 txtArbol.Text = miArbol.strArbol;
             }
             txtDato.Text = "";
+            //ol
         }
 
         private void btnCrearArbol_Click(object sender, EventArgs e)
