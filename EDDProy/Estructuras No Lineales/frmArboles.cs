@@ -226,5 +226,10 @@ namespace EDDemo.Estructuras_No_Lineales
         {
 
         }
+
+        private void btnBinario_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
