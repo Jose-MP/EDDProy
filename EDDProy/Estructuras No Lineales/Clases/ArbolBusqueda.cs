@@ -18,7 +18,7 @@ namespace EDDemo.Estructuras_No_Lineales
             Raiz = null;
             strArbol = "";
             strRecorrido = "";
-        }
+        }       
 
         public Boolean EstaVacio()
         {
@@ -119,6 +119,50 @@ namespace EDDemo.Estructuras_No_Lineales
                 return true;
             return BuscarNodo(dato, nodo.Izq) || BuscarNodo(dato, nodo.Der);
         }
+        public void EliminarPredecesor(int dato, ref NodoBinario raiz)
+        {
+            
+        }
+        public void EliminarSucesor(int dato, ref NodoBinario raiz)
+        {
+            
+        }
+        public string RecorridoPorNiveles(NodoBinario raiz)
+        {
+            if (raiz == null) return "El árbol está vacío";
+            Queue<NodoBinario> cola = new Queue<NodoBinario>();
+            StringBuilder resultado = new StringBuilder();
 
+            cola.Enqueue(raiz);
+
+            while (cola.Count > 0)
+            {
+                NodoBinario nodoActual = cola.Dequeue();
+                resultado.Append(nodoActual.Dato + " ");
+
+                if (nodoActual.Izq != null) cola.Enqueue(nodoActual.Izq);
+                if (nodoActual.Der != null) cola.Enqueue(nodoActual.Der);
+            }
+
+            return resultado.ToString();
+        }
+        public int Altura(NodoBinario nodo)
+        {
+            if (nodo == null) return -1;
+            int alturaIzquierda = Altura(nodo.Izq);
+            int alturaDerecha = Altura(nodo.Der);
+            return Math.Max(alturaIzquierda, alturaDerecha) + 1;
+        }
+        public int ContarHojas(NodoBinario nodo)
+        {
+            if (nodo == null) return 0;
+            if (nodo.Izq == null && nodo.Der == null) return 1;
+            return ContarHojas(nodo.Izq) + ContarHojas(nodo.Der);
+        }
+        public int ContarNodos(NodoBinario nodo)
+        {
+            if (nodo == null) return 0;
+            return 1 + ContarNodos(nodo.Izq) + ContarNodos(nodo.Der);
+        }
     }
 }

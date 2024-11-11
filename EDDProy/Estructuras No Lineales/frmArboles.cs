@@ -184,5 +184,47 @@ namespace EDDemo.Estructuras_No_Lineales
                 //cambio
             }
         }
+
+        private void btnPre_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnSuc_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnRecorrerN_Click(object sender, EventArgs e)
+        {
+            miRaiz = miArbol.RegresaRaiz();
+            lblNiveles.Text = miArbol.RecorridoPorNiveles(miRaiz);
+        }
+
+        private void btnAltura_Click(object sender, EventArgs e)
+        {
+            miRaiz = miArbol.RegresaRaiz();
+            int altura = miArbol.Altura(miRaiz);
+            lblAltura.Text = $"{altura}";
+        }
+
+        private void btnHojas_Click(object sender, EventArgs e)
+        {
+            miRaiz = miArbol.RegresaRaiz();
+            int hojas = miArbol.ContarHojas(miRaiz);
+            lblHojas.Text = $"{hojas}";
+        }
+
+        private void btnNodos_Click(object sender, EventArgs e)
+        {
+            miRaiz = miArbol.RegresaRaiz();
+            int totalNodos = miArbol.ContarNodos(miRaiz);
+            lblNodos.Text = $"{totalNodos}";
+        }
+
+        private void frmArboles_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
