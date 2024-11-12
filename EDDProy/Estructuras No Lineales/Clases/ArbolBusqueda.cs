@@ -236,5 +236,58 @@ namespace EDDemo.Estructuras_No_Lineales
             if (nodo == null) return 0;
             return 1 + ContarNodos(nodo.Izq) + ContarNodos(nodo.Der);
         }
+        public bool EsLleno(NodoBinario nodo)
+        {
+            if (nodo == null)
+                return true;
+
+            if (nodo.Izq == null && nodo.Der == null)
+                return true;
+
+            if (nodo.Izq != null && nodo.Der != null)
+                return EsLleno(nodo.Izq) && EsLleno(nodo.Der);
+
+            return false;
+        }
+        public bool EsCompleto(NodoBinario nodo)
+        {
+            if (nodo == null)
+                return true;
+
+            Queue<NodoBinario> colaAuxiliar = new Queue<NodoBinario>();
+            colaAuxiliar.Enqueue(nodo);
+            bool nodoNoLleno = false;
+
+            while (colaAuxiliar.Count > 0)
+            {
+                NodoBinario nodoAuxiliar = colaAuxiliar.Dequeue();
+
+                if (nodoAuxiliar.Izq != null)
+                {
+                    if (nodoNoLleno)
+                        return false;
+
+                    colaAuxiliar.Enqueue(nodoAuxiliar.Izq);
+                }
+                else
+                {
+                    nodoNoLleno = true;
+                }
+
+                if (nodoAuxiliar.Der != null)
+                {
+                    if (nodoNoLleno)
+                        return false;
+
+                    colaAuxiliar.Enqueue(nodoAuxiliar.Der);
+                }
+                else
+                {
+                    nodoNoLleno = true;
+                }
+            }
+
+            return true;
+        }
     }
 }

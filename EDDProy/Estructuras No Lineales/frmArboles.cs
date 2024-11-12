@@ -251,7 +251,20 @@ namespace EDDemo.Estructuras_No_Lineales
 
         private void btnBinario_Click(object sender, EventArgs e)
         {
+            miRaiz = miArbol.RegresaRaiz();
+            if (miArbol.EsLleno(miRaiz))
+                MessageBox.Show("Es un arbol lleno");
+            else
+                MessageBox.Show("No es un arbol lleno");
+        }
 
+        private void btnCompleto_Click(object sender, EventArgs e)
+        {
+            miRaiz = miArbol.RegresaRaiz();
+            if (miArbol.EsCompleto(miRaiz))
+                MessageBox.Show("Es un arbol completo");
+            else
+                MessageBox.Show("No es un arbol completo");
         }
     }
 }

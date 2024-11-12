@@ -56,9 +56,9 @@ namespace EDDemo.Estructuras_No_Lineales
             this.lblHojas = new System.Windows.Forms.Label();
             this.lblNodos = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnBinario = new System.Windows.Forms.Button();
+            this.btnLleno = new System.Windows.Forms.Button();
+            this.btnCompleto = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.lblBinario = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.txtNodos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -344,42 +344,43 @@ namespace EDDemo.Estructuras_No_Lineales
             this.label1.TabIndex = 41;
             this.label1.Text = "Recorrido:";
             // 
-            // btnBinario
+            // btnLleno
             // 
-            this.btnBinario.Location = new System.Drawing.Point(351, 113);
-            this.btnBinario.Name = "btnBinario";
-            this.btnBinario.Size = new System.Drawing.Size(91, 23);
-            this.btnBinario.TabIndex = 42;
-            this.btnBinario.Text = "Tipo de arbol";
-            this.btnBinario.UseVisualStyleBackColor = true;
-            this.btnBinario.Click += new System.EventHandler(this.btnBinario_Click);
+            this.btnLleno.Location = new System.Drawing.Point(432, 113);
+            this.btnLleno.Name = "btnLleno";
+            this.btnLleno.Size = new System.Drawing.Size(91, 23);
+            this.btnLleno.TabIndex = 42;
+            this.btnLleno.Text = "Lleno";
+            this.btnLleno.UseVisualStyleBackColor = true;
+            this.btnLleno.Click += new System.EventHandler(this.btnBinario_Click);
+            // 
+            // btnCompleto
+            // 
+            this.btnCompleto.Location = new System.Drawing.Point(432, 149);
+            this.btnCompleto.Name = "btnCompleto";
+            this.btnCompleto.Size = new System.Drawing.Size(91, 23);
+            this.btnCompleto.TabIndex = 43;
+            this.btnCompleto.Text = "Completo";
+            this.btnCompleto.UseVisualStyleBackColor = true;
+            this.btnCompleto.Click += new System.EventHandler(this.btnCompleto_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(348, 154);
+            this.label2.Location = new System.Drawing.Point(339, 118);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(42, 13);
-            this.label2.TabIndex = 43;
-            this.label2.Text = "Binario:";
-            // 
-            // lblBinario
-            // 
-            this.lblBinario.AutoSize = true;
-            this.lblBinario.Location = new System.Drawing.Point(397, 154);
-            this.lblBinario.Name = "lblBinario";
-            this.lblBinario.Size = new System.Drawing.Size(16, 13);
-            this.lblBinario.TabIndex = 44;
-            this.lblBinario.Text = "...";
+            this.label2.Size = new System.Drawing.Size(74, 13);
+            this.label2.TabIndex = 44;
+            this.label2.Text = "Verificar arbol:";
             // 
             // frmArboles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(738, 617);
-            this.Controls.Add(this.lblBinario);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.btnBinario);
+            this.Controls.Add(this.btnCompleto);
+            this.Controls.Add(this.btnLleno);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblNodos);
             this.Controls.Add(this.lblHojas);
@@ -445,8 +446,8 @@ namespace EDDemo.Estructuras_No_Lineales
         private System.Windows.Forms.Label lblHojas;
         private System.Windows.Forms.Label lblNodos;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnBinario;
+        private System.Windows.Forms.Button btnLleno;
+        private System.Windows.Forms.Button btnCompleto;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label lblBinario;
     }
 }
