@@ -119,36 +119,108 @@ namespace EDDemo.Estructuras_No_Lineales
                 return true;
             return BuscarNodo(dato, nodo.Izq) || BuscarNodo(dato, nodo.Der);
         }
-        public void EliminarPredecesor(int dato, ref NodoBinario raiz)
+        private NodoBinario BuscarMayor(NodoBinario nodo)
         {
-            
+            while (nodo != null && nodo.Der != null)
+            {
+                nodo = nodo.Der;
+            }
+            return nodo;
         }
-        public void EliminarSucesor(int dato, ref NodoBinario raiz)
+        private NodoBinario BuscarMenor(NodoBinario nodo)
         {
-            
+            while (nodo != null && nodo.Izq != null)
+            {
+                nodo = nodo.Izq;
+            }
+            return nodo;
         }
-        public string RecorridoPorNiveles(NodoBinario raiz)
+        public void EliminarPredecesor(int x, ref NodoBinario nodoPtr)
         {
-            if (raiz == null) return "El árbol está vacío";
-            Queue<NodoBinario> cola = new Queue<NodoBinario>();
+            if (nodoPtr == null)
+                return;
+
+            if (x < nodoPtr.Dato)
+            {
+                EliminarPredecesor(x, ref nodoPtr.Izq);
+            }
+            else if (x > nodoPtr.Dato)
+            {
+                EliminarPredecesor(x, ref nodoPtr.Der);
+            }
+            else if (nodoPtr.Izq != null && nodoPtr.Der != null)
+            {
+                NodoBinario mayor = BuscarMayor(nodoPtr.Izq);
+                nodoPtr.Dato = mayor.Dato;
+                EliminarPredecesor(mayor.Dato, ref nodoPtr.Izq);
+            }
+            else
+            {
+                NodoBinario temp = nodoPtr;
+                if (nodoPtr.Izq == null)
+                    nodoPtr = nodoPtr.Der;
+                else
+                    nodoPtr = nodoPtr.Izq;
+
+                temp = null;
+            }
+        }     
+        public void EliminarSucesor(int x, ref NodoBinario nodoPtr)
+        {
+            if (nodoPtr == null)
+                return;
+
+            if (x < nodoPtr.Dato)
+            {
+                EliminarSucesor(x, ref nodoPtr.Izq);
+            }
+            else if (x > nodoPtr.Dato)
+            {
+                EliminarSucesor(x, ref nodoPtr.Der);
+            }
+            else if (nodoPtr.Izq != null && nodoPtr.Der != null)
+            {
+                NodoBinario menor = BuscarMenor(nodoPtr.Der);
+                nodoPtr.Dato = menor.Dato;
+                EliminarSucesor(menor.Dato, ref nodoPtr.Der);
+            }
+            else
+            {
+                NodoBinario temp = nodoPtr;
+                if (nodoPtr.Izq == null)
+                    nodoPtr = nodoPtr.Der;
+                else
+                    nodoPtr = nodoPtr.Izq;
+
+                temp = null;
+            }
+        }        
+        public string RecorridoPorNiveles(NodoBinario nodoPtr)
+        {
+            if (nodoPtr == null)
+                return "El árbol está vacío";
+
+            Queue<NodoBinario> colaAuxiliar = new Queue<NodoBinario>();
+            colaAuxiliar.Enqueue(nodoPtr);
+
             StringBuilder resultado = new StringBuilder();
 
-            cola.Enqueue(raiz);
-
-            while (cola.Count > 0)
+            while (colaAuxiliar.Count > 0)
             {
-                NodoBinario nodoActual = cola.Dequeue();
-                resultado.Append(nodoActual.Dato + " ");
+                NodoBinario nodoAuxiliar = colaAuxiliar.Dequeue();
+                resultado.Append(nodoAuxiliar.Dato + " - ");
 
-                if (nodoActual.Izq != null) cola.Enqueue(nodoActual.Izq);
-                if (nodoActual.Der != null) cola.Enqueue(nodoActual.Der);
+                if (nodoAuxiliar.Izq != null)
+                    colaAuxiliar.Enqueue(nodoAuxiliar.Izq);
+
+                if (nodoAuxiliar.Der != null)
+                    colaAuxiliar.Enqueue(nodoAuxiliar.Der);
             }
-
-            return resultado.ToString();
+            return resultado.ToString().TrimEnd(' ', '-');
         }
         public int Altura(NodoBinario nodo)
         {
-            if (nodo == null) return -1;
+            if (nodo == null) return 0;
             int alturaIzquierda = Altura(nodo.Izq);
             int alturaDerecha = Altura(nodo.Der);
             return Math.Max(alturaIzquierda, alturaDerecha) + 1;

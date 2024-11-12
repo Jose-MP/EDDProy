@@ -187,12 +187,34 @@ namespace EDDemo.Estructuras_No_Lineales
 
         private void btnPre_Click(object sender, EventArgs e)
         {
-            
+            if (int.TryParse(txtDato.Text, out int dato))
+            {
+                miRaiz = miArbol.RegresaRaiz();
+                miArbol.EliminarPredecesor(dato, ref miRaiz);
+                miArbol.strArbol = "";
+                miArbol.MuestraArbolAcostado(1, miRaiz);
+                txtArbol.Text = miArbol.strArbol;
+            }
+            else
+            {
+                MessageBox.Show("Ingrese un valor válido.");
+            }
         }
 
         private void btnSuc_Click(object sender, EventArgs e)
         {
-            
+            if (int.TryParse(txtDato.Text, out int dato))
+            {
+                miRaiz = miArbol.RegresaRaiz();
+                miArbol.EliminarSucesor(dato, ref miRaiz);
+                miArbol.strArbol = "";
+                miArbol.MuestraArbolAcostado(1, miRaiz);
+                txtArbol.Text = miArbol.strArbol;
+            }
+            else
+            {
+                MessageBox.Show("Por favor, ingrese un valor válido.");
+            }
         }
 
         private void btnRecorrerN_Click(object sender, EventArgs e)
