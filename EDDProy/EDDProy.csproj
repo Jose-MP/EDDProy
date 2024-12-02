@@ -49,9 +49,47 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Estructuras Lineales\Clases\ClsLista.cs" />
+    <Compile Include="Estructuras Lineales\Clases\ClsListasD.cs" />
     <Compile Include="Estructuras Lineales\Clases\Listas.cs" />
     <Compile Include="Estructuras Lineales\Clases\Nodo.cs" />
     <Compile Include="Estructuras Lineales\Clases\Pilas.cs" />
+    <Compile Include="Estructuras Lineales\Colas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Estructuras Lineales\Colas.Designer.cs">
+      <DependentUpon>Colas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Estructuras Lineales\LCirculares.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Estructuras Lineales\LCirculares.Designer.cs">
+      <DependentUpon>LCirculares.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Estructuras Lineales\LDobles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Estructuras Lineales\LDobles.Designer.cs">
+      <DependentUpon>LDobles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Estructuras Lineales\LDobles2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Estructuras Lineales\LDobles2.Designer.cs">
+      <DependentUpon>LDobles2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Estructuras Lineales\ListasMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Estructuras Lineales\ListasMenu.Designer.cs">
+      <DependentUpon>ListasMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Estructuras Lineales\LSimples.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Estructuras Lineales\LSimples.Designer.cs">
+      <DependentUpon>LSimples.cs</DependentUpon>
+    </Compile>
     <Compile Include="Estructuras Lineales\Pilas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +125,24 @@
     <Compile Include="Graphviz.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Estructuras Lineales\Colas.resx">
+      <DependentUpon>Colas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Estructuras Lineales\LCirculares.resx">
+      <DependentUpon>LCirculares.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Estructuras Lineales\LDobles.resx">
+      <DependentUpon>LDobles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Estructuras Lineales\LDobles2.resx">
+      <DependentUpon>LDobles2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Estructuras Lineales\ListasMenu.resx">
+      <DependentUpon>ListasMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Estructuras Lineales\LSimples.resx">
+      <DependentUpon>LSimples.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Estructuras Lineales\Pilas.resx">
       <DependentUpon>Pilas.cs</DependentUpon>
     </EmbeddedResource>
