@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ExamenUnidad2
+namespace EDDemo
 {
     public partial class Colas : Form
     {
@@ -155,9 +155,7 @@ namespace ExamenUnidad2
 
         private void BtnRegresar_Click(object sender, EventArgs e)
         {
-            MenuFCL men = new MenuFCL();
-            men.Show();
-            Hide();
+            
         }
 
         private void BtnIngresar_Click(object sender, EventArgs e)

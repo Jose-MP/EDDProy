@@ -1,4 +1,4 @@
-﻿namespace ExamenUnidad2
+﻿namespace EDDemo
 {
     partial class Colas
     {

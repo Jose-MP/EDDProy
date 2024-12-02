@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ExamenUnidad2
+namespace EDDemo
 {
     public partial class LDobles : Form
     {
@@ -169,9 +169,7 @@ namespace ExamenUnidad2
 
         private void BtnRegresar_Click(object sender, EventArgs e)
         {
-            ListasMenu lm = new ListasMenu();
-            lm.Show();
-            Hide();
+            
         }
     }
 }

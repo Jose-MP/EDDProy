@@ -20,9 +20,7 @@ namespace EDDemo
 
         private void btnPush_Click(object sender, EventArgs e)
         {
-            String var2;
-
-            Pilas miPila = new Pilas();
+            Pilasasa miPila = new Pilasasa();
             miPila.Push();          
         }
     }

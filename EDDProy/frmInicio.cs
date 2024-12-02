@@ -30,7 +30,7 @@ namespace EDDemo
 
         private void pilasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmPilas mPilas = new frmPilas();
+            Pilas mPilas = new Pilas();
             mPilas.MdiParent = this;
             mPilas.Show();
         }
@@ -45,6 +45,77 @@ namespace EDDemo
             frmArboles mArboles = new frmArboles();
             mArboles.MdiParent = this;
             mArboles.Show();
+        }
+
+        private void colasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Colas mColas = new Colas();
+            mColas.MdiParent = this;
+            mColas.Show();
+        }
+
+        private void circularesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LDobles mDo = new LDobles();
+            mDo.MdiParent = this;
+            mDo.Show();
+
+        }
+
+        private void simplesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LSimples mSim = new LSimples();
+            mSim.MdiParent = this;
+            mSim.Show();
+        }
+
+        private void doblesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LCirculares mCircu = new LCirculares();
+            mCircu.MdiParent = this;
+            mCircu.Show();
+        }
+
+        private void exponenteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Exponente mEx = new Exponente();
+            mEx.MdiParent = this;
+            mEx.Show();
+        }
+
+        private void factorialToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Factorial mFac = new Factorial();
+            mFac.MdiParent = this;
+            mFac.Show();
+        }
+
+        private void busquedaBinariaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Busqueda mBus = new Busqueda();
+            mBus.MdiParent = this;
+            mBus.Show();
+        }
+
+        private void secuenciaFibonacciToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Fibonacci mFi = new Fibonacci();
+            mFi.MdiParent = this;
+            mFi.Show();
+        }
+
+        private void algoritmoHanoiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Hanoi mHan = new Hanoi();
+            mHan.MdiParent = this;
+            mHan.Show();
+        }
+
+        private void sumaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Suma mSum = new Suma();
+            mSum.MdiParent = this;
+            mSum.Show();
         }
     }
 }
