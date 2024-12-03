@@ -47,6 +47,20 @@ namespace EDDemo
             this.secuenciaFibonacciToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.algoritmoHanoiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sumaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.metodosDeOrdenamientoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.internosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.externosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.burbujaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.quickSortToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.seToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.radixToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.intercalaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mezclaDirectaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mezToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.metodosDeBusquedaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.secuencialToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.binariaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.hashToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,7 +70,9 @@ namespace EDDemo
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.estructurasLinealesToolStripMenuItem,
             this.estructurasNoLibealesToolStripMenuItem,
-            this.recursividadToolStripMenuItem});
+            this.recursividadToolStripMenuItem,
+            this.metodosDeOrdenamientoToolStripMenuItem,
+            this.metodosDeBusquedaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(3, 1, 0, 1);
@@ -197,6 +213,116 @@ namespace EDDemo
             this.sumaToolStripMenuItem.Text = "Suma";
             this.sumaToolStripMenuItem.Click += new System.EventHandler(this.sumaToolStripMenuItem_Click);
             // 
+            // metodosDeOrdenamientoToolStripMenuItem
+            // 
+            this.metodosDeOrdenamientoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.internosToolStripMenuItem,
+            this.externosToolStripMenuItem});
+            this.metodosDeOrdenamientoToolStripMenuItem.Name = "metodosDeOrdenamientoToolStripMenuItem";
+            this.metodosDeOrdenamientoToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.metodosDeOrdenamientoToolStripMenuItem.Text = "Metodos de ordenamiento";
+            // 
+            // internosToolStripMenuItem
+            // 
+            this.internosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.burbujaToolStripMenuItem,
+            this.quickSortToolStripMenuItem,
+            this.seToolStripMenuItem,
+            this.radixToolStripMenuItem});
+            this.internosToolStripMenuItem.Name = "internosToolStripMenuItem";
+            this.internosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.internosToolStripMenuItem.Text = "Internos";
+            // 
+            // externosToolStripMenuItem
+            // 
+            this.externosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.intercalaciónToolStripMenuItem,
+            this.mezclaDirectaToolStripMenuItem,
+            this.mezToolStripMenuItem});
+            this.externosToolStripMenuItem.Name = "externosToolStripMenuItem";
+            this.externosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.externosToolStripMenuItem.Text = "Externos";
+            // 
+            // burbujaToolStripMenuItem
+            // 
+            this.burbujaToolStripMenuItem.Name = "burbujaToolStripMenuItem";
+            this.burbujaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.burbujaToolStripMenuItem.Text = "Burbuja";
+            this.burbujaToolStripMenuItem.Click += new System.EventHandler(this.burbujaToolStripMenuItem_Click);
+            // 
+            // quickSortToolStripMenuItem
+            // 
+            this.quickSortToolStripMenuItem.Name = "quickSortToolStripMenuItem";
+            this.quickSortToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.quickSortToolStripMenuItem.Text = "QuickSort";
+            this.quickSortToolStripMenuItem.Click += new System.EventHandler(this.quickSortToolStripMenuItem_Click);
+            // 
+            // seToolStripMenuItem
+            // 
+            this.seToolStripMenuItem.Name = "seToolStripMenuItem";
+            this.seToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.seToolStripMenuItem.Text = "ShellSort";
+            this.seToolStripMenuItem.Click += new System.EventHandler(this.seToolStripMenuItem_Click);
+            // 
+            // radixToolStripMenuItem
+            // 
+            this.radixToolStripMenuItem.Name = "radixToolStripMenuItem";
+            this.radixToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.radixToolStripMenuItem.Text = "Radix";
+            this.radixToolStripMenuItem.Click += new System.EventHandler(this.radixToolStripMenuItem_Click);
+            // 
+            // intercalaciónToolStripMenuItem
+            // 
+            this.intercalaciónToolStripMenuItem.Name = "intercalaciónToolStripMenuItem";
+            this.intercalaciónToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.intercalaciónToolStripMenuItem.Text = "Intercalación";
+            this.intercalaciónToolStripMenuItem.Click += new System.EventHandler(this.intercalaciónToolStripMenuItem_Click);
+            // 
+            // mezclaDirectaToolStripMenuItem
+            // 
+            this.mezclaDirectaToolStripMenuItem.Name = "mezclaDirectaToolStripMenuItem";
+            this.mezclaDirectaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.mezclaDirectaToolStripMenuItem.Text = "Mezcla Directa";
+            this.mezclaDirectaToolStripMenuItem.Click += new System.EventHandler(this.mezclaDirectaToolStripMenuItem_Click);
+            // 
+            // mezToolStripMenuItem
+            // 
+            this.mezToolStripMenuItem.Name = "mezToolStripMenuItem";
+            this.mezToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.mezToolStripMenuItem.Text = "Mezcla Natural";
+            this.mezToolStripMenuItem.Click += new System.EventHandler(this.mezToolStripMenuItem_Click);
+            // 
+            // metodosDeBusquedaToolStripMenuItem
+            // 
+            this.metodosDeBusquedaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.secuencialToolStripMenuItem,
+            this.binariaToolStripMenuItem,
+            this.hashToolStripMenuItem});
+            this.metodosDeBusquedaToolStripMenuItem.Name = "metodosDeBusquedaToolStripMenuItem";
+            this.metodosDeBusquedaToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.metodosDeBusquedaToolStripMenuItem.Text = "Metodos de busqueda";
+            // 
+            // secuencialToolStripMenuItem
+            // 
+            this.secuencialToolStripMenuItem.Name = "secuencialToolStripMenuItem";
+            this.secuencialToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.secuencialToolStripMenuItem.Text = "Secuencial";
+            this.secuencialToolStripMenuItem.Click += new System.EventHandler(this.secuencialToolStripMenuItem_Click);
+            // 
+            // binariaToolStripMenuItem
+            // 
+            this.binariaToolStripMenuItem.Name = "binariaToolStripMenuItem";
+            this.binariaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.binariaToolStripMenuItem.Text = "Binaria";
+            this.binariaToolStripMenuItem.Click += new System.EventHandler(this.binariaToolStripMenuItem_Click);
+            // 
+            // hashToolStripMenuItem
+            // 
+            this.hashToolStripMenuItem.Name = "hashToolStripMenuItem";
+            this.hashToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.hashToolStripMenuItem.Text = "Hash";
+            this.hashToolStripMenuItem.Click += new System.EventHandler(this.hashToolStripMenuItem_Click);
+            // 
             // frmInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -236,6 +362,20 @@ namespace EDDemo
         private System.Windows.Forms.ToolStripMenuItem secuenciaFibonacciToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem algoritmoHanoiToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sumaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem metodosDeOrdenamientoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem internosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem burbujaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem quickSortToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem seToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem radixToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem externosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem intercalaciónToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mezclaDirectaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mezToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem metodosDeBusquedaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem secuencialToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem binariaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem hashToolStripMenuItem;
     }
 }
 

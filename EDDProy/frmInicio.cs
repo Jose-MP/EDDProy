@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using EDDemo.Estructuras_No_Lineales;
+using EDDemo.Ordenamiento;
+using EDDemo.Ordenamiento.Externo;
+
 
 namespace EDDemo
 {
@@ -116,6 +119,76 @@ namespace EDDemo
             Suma mSum = new Suma();
             mSum.MdiParent = this;
             mSum.Show();
+        }
+
+        private void mezToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Natural mNat = new Natural();
+            mNat.MdiParent = this;
+            mNat.Show();
+        }
+
+        private void burbujaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Burbuja mBur = new Burbuja();
+            mBur.MdiParent = this;
+            mBur.Show();
+        }
+
+        private void quickSortToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            QuickSort mQS = new QuickSort();
+            mQS.MdiParent = this;
+            mQS.Show();
+        }
+
+        private void seToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ShellSort mSS = new ShellSort();
+            mSS.MdiParent = this;
+            mSS.Show();
+        }
+
+        private void radixToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Radix mRa = new Radix();
+            mRa.MdiParent = this;
+            mRa.Show();
+        }
+
+        private void intercalaciónToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Intercalacion mIn = new Intercalacion();
+            mIn.MdiParent = this;
+            mIn.Show();
+        }
+
+        private void mezclaDirectaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Directa mDi = new Directa();
+            mDi.MdiParent = this;
+            mDi.Show();
+        }
+
+        private void secuencialToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Secuencial mSec = new Secuencial();
+            mSec.MdiParent = this;
+            mSec.Show();
+        }
+
+        private void binariaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Binaria mBi = new Binaria();
+            mBi.MdiParent = this;
+            mBi.Show();
+        }
+
+        private void hashToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Hash mHa = new Hash();
+            mHa.MdiParent = this;
+            mHa.Show();
         }
     }
 }
