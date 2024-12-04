@@ -1,6 +1,6 @@
-﻿namespace EDDemo
+﻿namespace EDDemo.Estructuras_Lineales
 {
-    partial class LCirculares
+    partial class LCircularesD
     {
         /// <summary>
         /// Required designer variable.
@@ -41,7 +41,7 @@
             // 
             // txtLista
             // 
-            this.txtLista.Location = new System.Drawing.Point(342, 43);
+            this.txtLista.Location = new System.Drawing.Point(337, 32);
             this.txtLista.Multiline = true;
             this.txtLista.Name = "txtLista";
             this.txtLista.Size = new System.Drawing.Size(250, 305);
@@ -49,7 +49,7 @@
             // 
             // BtnBuscar
             // 
-            this.BtnBuscar.Location = new System.Drawing.Point(469, 364);
+            this.BtnBuscar.Location = new System.Drawing.Point(464, 353);
             this.BtnBuscar.Name = "BtnBuscar";
             this.BtnBuscar.Size = new System.Drawing.Size(124, 28);
             this.BtnBuscar.TabIndex = 43;
@@ -59,7 +59,7 @@
             // 
             // BtnMostrar
             // 
-            this.BtnMostrar.Location = new System.Drawing.Point(322, 364);
+            this.BtnMostrar.Location = new System.Drawing.Point(317, 353);
             this.BtnMostrar.Name = "BtnMostrar";
             this.BtnMostrar.Size = new System.Drawing.Size(124, 29);
             this.BtnMostrar.TabIndex = 42;
@@ -69,7 +69,7 @@
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(150, 73);
+            this.txtID.Location = new System.Drawing.Point(145, 62);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(62, 20);
             this.txtID.TabIndex = 41;
@@ -77,7 +77,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(38, 76);
+            this.label2.Location = new System.Drawing.Point(33, 65);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(109, 13);
             this.label2.TabIndex = 40;
@@ -85,7 +85,7 @@
             // 
             // BtnEliminar
             // 
-            this.BtnEliminar.Location = new System.Drawing.Point(168, 364);
+            this.BtnEliminar.Location = new System.Drawing.Point(163, 353);
             this.BtnEliminar.Name = "BtnEliminar";
             this.BtnEliminar.Size = new System.Drawing.Size(124, 29);
             this.BtnEliminar.TabIndex = 39;
@@ -95,7 +95,7 @@
             // 
             // BtnIngresar
             // 
-            this.BtnIngresar.Location = new System.Drawing.Point(23, 364);
+            this.BtnIngresar.Location = new System.Drawing.Point(18, 353);
             this.BtnIngresar.Name = "BtnIngresar";
             this.BtnIngresar.Size = new System.Drawing.Size(124, 29);
             this.BtnIngresar.TabIndex = 38;
@@ -105,7 +105,7 @@
             // 
             // TxtNodo
             // 
-            this.TxtNodo.Location = new System.Drawing.Point(118, 43);
+            this.TxtNodo.Location = new System.Drawing.Point(113, 32);
             this.TxtNodo.Name = "TxtNodo";
             this.TxtNodo.Size = new System.Drawing.Size(185, 20);
             this.TxtNodo.TabIndex = 37;
@@ -113,17 +113,17 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(37, 46);
+            this.label1.Location = new System.Drawing.Point(32, 35);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(75, 13);
             this.label1.TabIndex = 36;
             this.label1.Text = "Ingresar nodo:";
             // 
-            // LCirculares
+            // LCircularesD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(622, 450);
+            this.ClientSize = new System.Drawing.Size(620, 406);
             this.Controls.Add(this.txtLista);
             this.Controls.Add(this.BtnBuscar);
             this.Controls.Add(this.BtnMostrar);
@@ -133,8 +133,8 @@
             this.Controls.Add(this.BtnIngresar);
             this.Controls.Add(this.TxtNodo);
             this.Controls.Add(this.label1);
-            this.Name = "LCirculares";
-            this.Text = "LCirculares";
+            this.Name = "LCircularesD";
+            this.Text = "LCircularesD";
             this.ResumeLayout(false);
             this.PerformLayout();
 

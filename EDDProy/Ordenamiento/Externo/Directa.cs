@@ -16,65 +16,64 @@ namespace EDDemo.Ordenamiento.Externo
         {
             InitializeComponent();
         }
-        private void MetodoMerge(int[] arr, StringBuilder secuencia)
-        {
-            MergeSort(arr, 0, arr.Length - 1, secuencia);
-        }
 
-        private void MergeSort(int[] arr, int izquierda, int derecha, StringBuilder secuencia)
+        private void MetodoMezclaDirecta(int[] arreglo, StringBuilder secuencia)
         {
-            if (izquierda < derecha)
+            int tamaño = arreglo.Length;
+            int[] listaAuxiliar = new int[tamaño];
+
+            int paso = 1;
+            while (paso < tamaño)
             {
-                int medio = (izquierda + derecha) / 2;
-                MergeSort(arr, izquierda, medio, secuencia);
-                MergeSort(arr, medio + 1, derecha, secuencia);
-                Merge(arr, izquierda, medio, derecha, secuencia);
+                int inicio = 0;
+
+                while (inicio < tamaño)
+                {
+                    int mitad = Math.Min(inicio + paso, tamaño);
+                    int final = Math.Min(inicio + 2 * paso, tamaño);
+
+                    MezclarSegmentos(arreglo, listaAuxiliar, inicio, mitad, final, secuencia);
+                    inicio += 2 * paso;
+                }
+
+                Array.Copy(listaAuxiliar, arreglo, tamaño);
+                paso *= 2;
             }
         }
 
-        private void Merge(int[] arr, int izquierda, int medio, int derecha, StringBuilder secuencia)
+        private void MezclarSegmentos(int[] arreglo, int[] listaAuxiliar, int inicio, int mitad, int final, StringBuilder secuencia)
         {
-            int n1 = medio - izquierda + 1;
-            int n2 = derecha - medio;
-            int[] izquierdaArr = new int[n1];
-            int[] derechaArr = new int[n2];
+            int i = inicio, j = mitad, k = inicio;
 
-            for (int i = 0; i < n1; i++)
-                izquierdaArr[i] = arr[izquierda + i];
-            for (int j = 0; j < n2; j++)
-                derechaArr[j] = arr[medio + 1 + j];
-
-            int iLeft = 0, iRight = 0, k = izquierda;
-            while (iLeft < n1 && iRight < n2)
+            while (i < mitad && j < final)
             {
-                if (izquierdaArr[iLeft] <= derechaArr[iRight])
+                if (arreglo[i] <= arreglo[j])
                 {
-                    arr[k] = izquierdaArr[iLeft];
-                    iLeft++;
+                    listaAuxiliar[k] = arreglo[i];
+                    i++;
                 }
                 else
                 {
-                    arr[k] = derechaArr[iRight];
-                    iRight++;
+                    listaAuxiliar[k] = arreglo[j];
+                    j++;
                 }
                 k++;
             }
 
-            while (iLeft < n1)
+            while (i < mitad)
             {
-                arr[k] = izquierdaArr[iLeft];
-                iLeft++;
+                listaAuxiliar[k] = arreglo[i];
+                i++;
                 k++;
             }
 
-            while (iRight < n2)
+            while (j < final)
             {
-                arr[k] = derechaArr[iRight];
-                iRight++;
+                listaAuxiliar[k] = arreglo[j];
+                j++;
                 k++;
             }
-
-            secuencia.AppendLine(string.Join(", ", arr));
+            secuencia.AppendLine(string.Join(", ", listaAuxiliar.Take(final)));
         }
         private void btnOrdenar_Click(object sender, EventArgs e)
         {
@@ -84,12 +83,12 @@ namespace EDDemo.Ordenamiento.Externo
             {
                 int[] numeros = datosEntrada.Split(',').Select(n => int.Parse(n.Trim())).ToArray();
                 StringBuilder secuencia = new StringBuilder();
-                MetodoMerge(numeros, secuencia);
+                MetodoMezclaDirecta(numeros, secuencia);
                 txtOrdenados.Text = secuencia.ToString();
             }
             catch (FormatException)
             {
-                MessageBox.Show("Datos ingresador incorrectamente");
+                MessageBox.Show("Datos ingresados incorrectamente");
             }
         }
     }

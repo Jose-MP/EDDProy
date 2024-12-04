@@ -72,6 +72,12 @@
     <Compile Include="Estructuras Lineales\LCirculares.Designer.cs">
       <DependentUpon>LCirculares.cs</DependentUpon>
     </Compile>
+    <Compile Include="Estructuras Lineales\LCircularesD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Estructuras Lineales\LCircularesD.Designer.cs">
+      <DependentUpon>LCircularesD.cs</DependentUpon>
+    </Compile>
     <Compile Include="Estructuras Lineales\LDobles.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -214,6 +220,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Estructuras Lineales\LCirculares.resx">
       <DependentUpon>LCirculares.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Estructuras Lineales\LCircularesD.resx">
+      <DependentUpon>LCircularesD.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Estructuras Lineales\LDobles.resx">
       <DependentUpon>LDobles.cs</DependentUpon>

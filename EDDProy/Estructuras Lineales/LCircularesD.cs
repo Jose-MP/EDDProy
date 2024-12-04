@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,53 +8,73 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace EDDemo
+namespace EDDemo.Estructuras_Lineales
 {
-    public partial class LCirculares : Form
+    public partial class LCircularesD : Form
     {
-        public LCirculares()
-        {
-            InitializeComponent();
-        }
         public class Nodo
         {
             public string Dato { get; set; }
             public int ID { get; set; }
             public Nodo Sig { get; set; }
+            public Nodo Prev { get; set; }
 
             public Nodo(string dato, int id)
             {
                 Dato = dato;
                 ID = id;
-                Sig = null;
+                Sig = this; 
+                Prev = this; 
             }
         }
-        public class ListaCircularSimple
+        public LCircularesD()
+        {
+            InitializeComponent();
+        }
+        public class ListaCircularDoble
         {
             private Nodo Inicio;
-            private Nodo Fin;
 
-            public ListaCircularSimple()
+            public ListaCircularDoble()
             {
                 Inicio = null;
-                Fin = null;
             }
-
-            public void Insertar(string dato, int id)
+            public void Insertar(int posicion, string dato, int id)
             {
                 Nodo nuevo = new Nodo(dato, id);
 
                 if (Inicio == null)
                 {
                     Inicio = nuevo;
-                    Fin = nuevo;
-                    nuevo.Sig = Inicio;
                     return;
                 }
 
-                nuevo.Sig = Inicio;
-                Fin.Sig = nuevo;
-                Fin = nuevo;
+                if (posicion == 0 || posicion == 1)
+                {
+                    nuevo.Sig = Inicio;
+                    nuevo.Prev = Inicio.Prev;
+                    Inicio.Prev.Sig = nuevo;
+                    Inicio.Prev = nuevo;
+                    Inicio = nuevo;
+                    return;
+                }
+
+                int pos = 1;
+                Nodo aux = Inicio;
+
+                while (pos < posicion && aux.Sig != Inicio)
+                {
+                    aux = aux.Sig;
+                    pos++;
+                }
+
+                if (aux != null)
+                {
+                    nuevo.Sig = aux.Sig;
+                    nuevo.Prev = aux;
+                    aux.Sig.Prev = nuevo;
+                    aux.Sig = nuevo;
+                }
             }
             public string Eliminar(int posicion)
             {
@@ -67,57 +86,34 @@ namespace EDDemo
 
                 int pos = 1;
                 Nodo aux = Inicio;
-                Nodo previo = null;
 
-                while (pos < posicion && aux != null)
+                while (pos < posicion && aux.Sig != Inicio)
                 {
-                    if (aux.Sig != Inicio)
-                    {
-                        previo = aux;
-                        aux = aux.Sig;
-                    }
-                    else
-                    {
-                        aux = null;
-                    }
+                    aux = aux.Sig;
                     pos++;
                 }
 
                 if (aux != null)
                 {
+                    aux.Prev.Sig = aux.Sig;
+                    aux.Sig.Prev = aux.Prev;
+
                     if (aux == Inicio)
                     {
-                        if (Inicio.Sig == Inicio)
-                        {
-                            Inicio = null;
-                        }
-                        else
-                        {
-                            Inicio = Inicio.Sig;
-                            previo.Sig = Inicio;
-                        }
-                    }
-                    else
-                    {
-                        
-                        if (aux.Sig == Inicio)
-                        {
-                            Fin = previo;
-                        }
-                        previo.Sig = aux.Sig;
+                        Inicio = aux.Sig;
                     }
 
                     string datoEliminado = aux.Dato;
                     aux = null;
+
                     return datoEliminado;
                 }
                 else
                 {
-                    MessageBox.Show("No lo encontramos");
+                    MessageBox.Show("No se encontró el nodo en la posición indicada");
                     return null;
                 }
             }
-
             public string MostrarLista()
             {
                 if (Inicio == null)
@@ -134,7 +130,6 @@ namespace EDDemo
 
                 return resultado;
             }
-
             public Nodo Buscar(int id)
             {
                 if (Inicio == null)
@@ -152,11 +147,11 @@ namespace EDDemo
                 return null;
             }
         }
-        ListaCircularSimple miListaCircular = new ListaCircularSimple();
+        ListaCircularDoble miListaCircularDoble = new ListaCircularDoble();
         private void ActualizarLista()
         {
             txtLista.Clear();
-            txtLista.AppendText(miListaCircular.MostrarLista());
+            txtLista.AppendText(miListaCircularDoble.MostrarLista());
         }
         private bool ValidarEntrada()
         {
@@ -179,6 +174,7 @@ namespace EDDemo
             TxtNodo.Clear();
             txtID.Clear();
         }
+
         private void BtnIngresar_Click(object sender, EventArgs e)
         {
             if (!ValidarEntrada())
@@ -188,8 +184,7 @@ namespace EDDemo
 
             int id = int.Parse(txtID.Text);
             string dato = TxtNodo.Text;
-
-            miListaCircular.Insertar(dato, id);
+            miListaCircularDoble.Insertar(0, dato, id);
             ActualizarLista();
             LimpiarControles();
         }
@@ -203,7 +198,7 @@ namespace EDDemo
             }
 
             int posicion = int.Parse(txtID.Text);
-            string datoEliminado = miListaCircular.Eliminar(posicion);
+            string datoEliminado = miListaCircularDoble.Eliminar(posicion);
 
             if (datoEliminado != null)
             {
@@ -214,20 +209,20 @@ namespace EDDemo
 
         private void BtnMostrar_Click(object sender, EventArgs e)
         {
-            string nodos = miListaCircular.MostrarLista();
+            string nodos = miListaCircularDoble.MostrarLista();
             MessageBox.Show($"Datos en la lista:\n{nodos}");
         }
 
         private void BtnBuscar_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtID.Text))
+            if(string.IsNullOrWhiteSpace(txtID.Text))
             {
                 MessageBox.Show("Ingrese el ID para buscar.");
                 return;
             }
 
             int id = int.Parse(txtID.Text);
-            Nodo encontrado = miListaCircular.Buscar(id);
+            Nodo encontrado = miListaCircularDoble.Buscar(id);
 
             if (encontrado != null)
             {

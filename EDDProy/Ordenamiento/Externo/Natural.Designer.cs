@@ -36,7 +36,6 @@
             // 
             // txtOrdenados
             // 
-            this.txtOrdenados.Enabled = false;
             this.txtOrdenados.Location = new System.Drawing.Point(29, 148);
             this.txtOrdenados.Multiline = true;
             this.txtOrdenados.Name = "txtOrdenados";
