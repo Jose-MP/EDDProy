@@ -9,8 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using EDDemo.Estructuras_No_Lineales;
 using EDDemo.Ordenamiento;
-using EDDemo.Ordenamiento.Externo;
-
 
 namespace EDDemo
 {
@@ -123,9 +121,7 @@ namespace EDDemo
 
         private void mezToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Natural mNat = new Natural();
-            mNat.MdiParent = this;
-            mNat.Show();
+            
         }
 
         private void burbujaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -158,23 +154,17 @@ namespace EDDemo
 
         private void intercalaciónToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Intercalacion mIn = new Intercalacion();
-            mIn.MdiParent = this;
-            mIn.Show();
+            
         }
 
         private void mezclaDirectaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Directa mDi = new Directa();
-            mDi.MdiParent = this;
-            mDi.Show();
+           
         }
 
         private void secuencialToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Secuencial mSec = new Secuencial();
-            mSec.MdiParent = this;
-            mSec.Show();
+            
         }
 
         private void binariaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -189,6 +179,11 @@ namespace EDDemo
             Hash mHa = new Hash();
             mHa.MdiParent = this;
             mHa.Show();
+        }
+
+        private void metodosDeOrdenamientoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
