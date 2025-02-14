@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EDDProy", "EDDProy\EDDProy.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Practica1", "..\..\..\OneDrive\Escritorio\visual proyectos\Practica1\Practica1\Practica1.csproj", "{67A806EC-1564-4FEC-BDE6-B003ABB1B57D}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PracticaUNO", "PracticaUNO", "{39054EEB-729E-45BE-A67E-51232DF4AC77}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PracticaUno", "PracticaUno", "{BB9FB8E7-D90B-4C70-BEB7-AD812212A7F7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -28,7 +28,7 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{67A806EC-1564-4FEC-BDE6-B003ABB1B57D} = {39054EEB-729E-45BE-A67E-51232DF4AC77}
+		{67A806EC-1564-4FEC-BDE6-B003ABB1B57D} = {BB9FB8E7-D90B-4C70-BEB7-AD812212A7F7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {720BB6D4-70E7-49D5-B5D9-20A1B4F5816F}
