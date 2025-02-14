@@ -129,6 +129,12 @@
     <Compile Include="Hash.Designer.cs">
       <DependentUpon>Hash.cs</DependentUpon>
     </Compile>
+    <Compile Include="Nuevos\Practica2Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nuevos\Practica2Form.Designer.cs">
+      <DependentUpon>Practica2Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ordenamiento\Interno\Burbuja.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -184,6 +190,12 @@
     </Compile>
     <Compile Include="Recursividad\Hanoi.Designer.cs">
       <DependentUpon>Hanoi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Nuevos\Practica1Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nuevos\Practica1Form.Designer.cs">
+      <DependentUpon>Practica1Form.cs</DependentUpon>
     </Compile>
     <Compile Include="Recursividad\Suma.cs">
       <SubType>Form</SubType>
@@ -268,6 +280,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Recursividad\Hanoi.resx">
       <DependentUpon>Hanoi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nuevos\Practica1Form.resx">
+      <DependentUpon>Practica1Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Recursividad\Suma.resx">
       <DependentUpon>Suma.cs</DependentUpon>
@@ -582,8 +597,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Practica1\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

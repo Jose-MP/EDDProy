@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using EDDemo.Estructuras_No_Lineales;
 using EDDemo.Ordenamiento;
+using Practica1;
 
 namespace EDDemo
 { //a
@@ -184,6 +185,13 @@ namespace EDDemo
         private void metodosDeOrdenamientoToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void practica1ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Practica1Form m = new Practica1Form();
+            m.MdiParent = this;
+            m.Show();
         }
     }
 }
