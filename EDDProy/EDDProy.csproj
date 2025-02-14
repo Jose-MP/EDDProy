@@ -129,6 +129,12 @@
     <Compile Include="Hash.Designer.cs">
       <DependentUpon>Hash.cs</DependentUpon>
     </Compile>
+    <Compile Include="Nuevos\formimagenes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nuevos\formimagenes.Designer.cs">
+      <DependentUpon>formimagenes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Nuevos\Practica2Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -203,6 +209,32 @@
     <Compile Include="Recursividad\Suma.Designer.cs">
       <DependentUpon>Suma.cs</DependentUpon>
     </Compile>
+    <Content Include="Imagenes\Letras\A.jpg" />
+    <Content Include="Imagenes\Letras\B.jpg" />
+    <Content Include="Imagenes\Letras\C.jpg" />
+    <Content Include="Imagenes\Letras\D.jpg" />
+    <Content Include="Imagenes\Letras\E.jpg" />
+    <Content Include="Imagenes\Letras\F.jpg" />
+    <Content Include="Imagenes\Letras\G.jpg" />
+    <Content Include="Imagenes\Letras\H.jpg" />
+    <Content Include="Imagenes\Letras\I.jpg" />
+    <Content Include="Imagenes\Letras\J.jpg" />
+    <Content Include="Imagenes\Letras\K.jpg" />
+    <Content Include="Imagenes\Letras\L.jpg" />
+    <Content Include="Imagenes\Letras\M.jpg" />
+    <Content Include="Imagenes\Letras\N.jpg" />
+    <Content Include="Imagenes\Letras\O.jpg" />
+    <Content Include="Imagenes\Letras\P.jpg" />
+    <Content Include="Imagenes\Letras\Q.jpg" />
+    <Content Include="Imagenes\Letras\R.jpg" />
+    <Content Include="Imagenes\Letras\S.jpg" />
+    <Content Include="Imagenes\Letras\T.jpg" />
+    <Content Include="Imagenes\Letras\U.jpg" />
+    <Content Include="Imagenes\Letras\V.jpg" />
+    <Content Include="Imagenes\Letras\W.jpg" />
+    <Content Include="Imagenes\Letras\X.jpg" />
+    <Content Include="Imagenes\Letras\Y.jpg" />
+    <Content Include="Imagenes\Letras\Z.jpg" />
     <EmbeddedResource Include="Binaria.resx">
       <DependentUpon>Binaria.cs</DependentUpon>
     </EmbeddedResource>
@@ -238,6 +270,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Hash.resx">
       <DependentUpon>Hash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nuevos\formimagenes.resx">
+      <DependentUpon>formimagenes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nuevos\Practica2Form.resx">
+      <DependentUpon>Practica2Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ordenamiento\Interno\Burbuja.resx">
       <DependentUpon>Burbuja.cs</DependentUpon>

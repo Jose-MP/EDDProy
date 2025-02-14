@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using EDDemo.Estructuras_No_Lineales;
+using EDDemo.Nuevos;
 using EDDemo.Ordenamiento;
 using Practica1;
 
@@ -192,6 +193,13 @@ namespace EDDemo
             Practica1Form m = new Practica1Form();
             m.MdiParent = this;
             m.Show();
+        }
+
+        private void practica2ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Practica2Form practica2Form = new Practica2Form();
+            practica2Form.MdiParent = this;
+            practica2Form.Show();
         }
     }
 }

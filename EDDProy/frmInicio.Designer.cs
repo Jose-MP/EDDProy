@@ -63,6 +63,7 @@ namespace EDDemo
             this.hashToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.másToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.practica1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.practica2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -90,7 +91,7 @@ namespace EDDemo
             this.colasToolStripMenuItem,
             this.listasToolStripMenuItem});
             this.estructurasLinealesToolStripMenuItem.Name = "estructurasLinealesToolStripMenuItem";
-            this.estructurasLinealesToolStripMenuItem.Size = new System.Drawing.Size(148, 28);
+            this.estructurasLinealesToolStripMenuItem.Size = new System.Drawing.Size(148, 24);
             this.estructurasLinealesToolStripMenuItem.Text = "Estructuras lineales";
             this.estructurasLinealesToolStripMenuItem.Click += new System.EventHandler(this.estructurasLinealesToolStripMenuItem_Click);
             // 
@@ -151,7 +152,7 @@ namespace EDDemo
             this.estructurasNoLibealesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.arbolesToolStripMenuItem});
             this.estructurasNoLibealesToolStripMenuItem.Name = "estructurasNoLibealesToolStripMenuItem";
-            this.estructurasNoLibealesToolStripMenuItem.Size = new System.Drawing.Size(169, 28);
+            this.estructurasNoLibealesToolStripMenuItem.Size = new System.Drawing.Size(169, 24);
             this.estructurasNoLibealesToolStripMenuItem.Text = "Estructuras no lineales";
             // 
             // arbolesToolStripMenuItem
@@ -171,7 +172,7 @@ namespace EDDemo
             this.algoritmoHanoiToolStripMenuItem,
             this.sumaToolStripMenuItem});
             this.recursividadToolStripMenuItem.Name = "recursividadToolStripMenuItem";
-            this.recursividadToolStripMenuItem.Size = new System.Drawing.Size(107, 28);
+            this.recursividadToolStripMenuItem.Size = new System.Drawing.Size(107, 24);
             this.recursividadToolStripMenuItem.Text = "Recursividad";
             // 
             // exponenteToolStripMenuItem
@@ -222,7 +223,7 @@ namespace EDDemo
             this.internosToolStripMenuItem,
             this.externosToolStripMenuItem});
             this.metodosDeOrdenamientoToolStripMenuItem.Name = "metodosDeOrdenamientoToolStripMenuItem";
-            this.metodosDeOrdenamientoToolStripMenuItem.Size = new System.Drawing.Size(201, 28);
+            this.metodosDeOrdenamientoToolStripMenuItem.Size = new System.Drawing.Size(201, 24);
             this.metodosDeOrdenamientoToolStripMenuItem.Text = "Metodos de ordenamiento";
             this.metodosDeOrdenamientoToolStripMenuItem.Click += new System.EventHandler(this.metodosDeOrdenamientoToolStripMenuItem_Click);
             // 
@@ -303,7 +304,7 @@ namespace EDDemo
             this.binariaToolStripMenuItem,
             this.hashToolStripMenuItem});
             this.metodosDeBusquedaToolStripMenuItem.Name = "metodosDeBusquedaToolStripMenuItem";
-            this.metodosDeBusquedaToolStripMenuItem.Size = new System.Drawing.Size(172, 28);
+            this.metodosDeBusquedaToolStripMenuItem.Size = new System.Drawing.Size(172, 24);
             this.metodosDeBusquedaToolStripMenuItem.Text = "Metodos de busqueda";
             // 
             // secuencialToolStripMenuItem
@@ -330,17 +331,25 @@ namespace EDDemo
             // másToolStripMenuItem
             // 
             this.másToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.practica1ToolStripMenuItem});
+            this.practica1ToolStripMenuItem,
+            this.practica2ToolStripMenuItem});
             this.másToolStripMenuItem.Name = "másToolStripMenuItem";
-            this.másToolStripMenuItem.Size = new System.Drawing.Size(50, 28);
+            this.másToolStripMenuItem.Size = new System.Drawing.Size(50, 24);
             this.másToolStripMenuItem.Text = "Más";
             // 
             // practica1ToolStripMenuItem
             // 
             this.practica1ToolStripMenuItem.Name = "practica1ToolStripMenuItem";
-            this.practica1ToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
+            this.practica1ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.practica1ToolStripMenuItem.Text = "Practica1";
             this.practica1ToolStripMenuItem.Click += new System.EventHandler(this.practica1ToolStripMenuItem_Click);
+            // 
+            // practica2ToolStripMenuItem
+            // 
+            this.practica2ToolStripMenuItem.Name = "practica2ToolStripMenuItem";
+            this.practica2ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.practica2ToolStripMenuItem.Text = "Practica 2";
+            this.practica2ToolStripMenuItem.Click += new System.EventHandler(this.practica2ToolStripMenuItem_Click);
             // 
             // frmInicio
             // 
@@ -397,6 +406,7 @@ namespace EDDemo
         private System.Windows.Forms.ToolStripMenuItem hashToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem másToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem practica1ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem practica2ToolStripMenuItem;
     }
 }
 
