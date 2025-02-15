@@ -69,6 +69,7 @@ namespace EDDemo.Nuevos
                 formimagenes formImagenes = new formimagenes();
                 formImagenes.pictureBoxGrande.Image = pictureBox.Image;
                 formImagenes.NombreImagen = nombreImagen;
+                formImagenes.Text = nombreImagen;
                 formImagenes.Show();
             }
         }
